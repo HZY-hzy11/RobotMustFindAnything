@@ -34,7 +34,7 @@ conda activate rofa
 安装 Python 依赖：
 
 ```bash
-pip install pyrealsense2 "numpy<2.0" opencv-python
+pip install pyrealsense2 "numpy<2.0" opencv-python scipy
 ```
 
 ### 2. ROS 2 环境

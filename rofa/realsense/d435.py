@@ -101,6 +101,30 @@ class D435(RealsenseBase):
             print(f"[D435] Error getting frames: {e}")
             return None, None
 
+    def get_intrinsics(self):
+        """
+        获取彩色相机的内参
+        :return: dict with keys: fx, fy, cx, cy, width, height, distortion_model, distortion_coeffs
+                 或 None（相机未启动时）
+        """
+        if not self.is_running:
+            print("[D435] Camera is not running. Call start() first.")
+            return None
+
+        profile = self.pipeline_profile.get_stream(rs.stream.color)
+        intrinsics = profile.as_video_stream_profile().get_intrinsics()
+
+        return {
+            "fx": intrinsics.fx,
+            "fy": intrinsics.fy,
+            "cx": intrinsics.ppx,
+            "cy": intrinsics.ppy,
+            "width": intrinsics.width,
+            "height": intrinsics.height,
+            "distortion_model": str(intrinsics.model),
+            "distortion_coeffs": list(intrinsics.coeffs),
+        }
+
 if __name__ == "__main__":
     # 简单的测试代码
     import cv2
