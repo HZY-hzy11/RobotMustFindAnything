@@ -37,6 +37,23 @@ conda activate rofa
 pip install pyrealsense2 "numpy<2.0" opencv-python scipy
 ```
 
+SAM3 环境配置
+```bash
+pip install torch==2.7.0 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
+cd rofa/sam3/sam3_lib/sam3/
+pip install -e .
+pip install einops decord pycocotools psutil
+pip install httpx[socks]
+```
+
+
+SAM3 权重下载 (Modelscope)
+
+```bash
+pip install modelscope
+modelscope download --model facebook/sam3  # /home/user/.cache/modelscope/hub/models/facebook/sam3
+```
+
 ### 2. ROS 2 环境
 
 > ROS 2 环境仅在使用激光雷达（Livox MID360）和 FAST-LIO2 建图时需要。如果仅使用 RealSense 相机或 ArUco 功能，可以跳过此部分。
