@@ -17,6 +17,8 @@ RobotMustFindAnything/
 └── rofa/                   # 功能模块源码
     ├── realsense/          # RealSense 相机模块 (D435)
     ├── aruco/              # ArUco 标记检测模块
+    ├── sam3/               # SAM3 语义分割模块
+    ├── llm/                # LLM 推理模块（基于 SiliconFlow）
     └── ros_ws/             # ROS2 工作空间 (Livox 驱动 + FAST-LIO2)
 ```
 
@@ -34,7 +36,7 @@ conda activate rofa
 安装 Python 依赖：
 
 ```bash
-pip install pyrealsense2 "numpy<2.0" opencv-python scipy
+pip install pyrealsense2 "numpy<2.0" opencv-python scipy openai
 ```
 
 SAM3 环境配置
@@ -52,6 +54,20 @@ SAM3 权重下载 (Modelscope)
 ```bash
 pip install modelscope
 modelscope download --model facebook/sam3  # /home/user/.cache/modelscope/hub/models/facebook/sam3
+```
+
+LLM 模块配置
+
+> LLM 模块用于基于场景描述进行智能位置推理，仅在需要语义位置查询功能时需要配置。
+
+##### 获取 SiliconFlow API Key
+
+1. 访问 [SiliconFlow 官网](https://siliconflow.cn/)
+2. 注册账户并获取 API Key
+3. 设置环境变量：
+
+```bash
+export SILICONFLOW_API_KEY="your_api_key_here"
 ```
 
 ### 2. ROS 2 环境
