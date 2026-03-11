@@ -180,10 +180,10 @@
             {
             "object_id": 4,
             "difficulty": "不容易找到 (Hard)",
-            "short_zh": "黄色小摆件",
-            "detailed_zh": "躲在笔记本电脑屏幕后方、紧挨着一个透明玻璃空瓶放置的微型黄色卡通小人摆件。",
-            "short_en": "small yellow figurine",
-            "detailed_en": "A miniature yellow cartoon figurine hiding behind the laptop screen, placed right next to an empty clear glass bottle."
+            "short_zh": "黄白色卡通小人摆件",
+            "detailed_zh": "躲在笔记本电脑屏幕后方、紧挨着一个透明玻璃空瓶放置的微型黄白色卡通小人摆件。",
+            "short_en": "small yellow and white cartoon figurine",
+            "detailed_en": "A miniature yellow and white cartoon figurine hiding behind the laptop screen, placed right next to an empty clear glass bottle."
             },
             {
             "object_id": 5,
@@ -368,10 +368,10 @@
             {
             "object_id": 3,
             "difficulty": "中等 (Medium)",
-            "short_zh": "绿盖矿泉水瓶",
-            "detailed_zh": "放置在两台显示器屏幕中间交界处前方的那个带有绿色瓶盖和绿色标签的透明塑料矿泉水瓶。",
-            "short_en": "green-capped water bottle",
-            "detailed_en": "A clear plastic water bottle with a green cap and green label, placed in front of the junction between the two monitor screens."
+            "short_zh": "白盖矿泉水瓶",
+            "detailed_zh": "放置在两台显示器屏幕中间交界处前方的那个带有白色瓶盖和白色标签的透明塑料矿泉水瓶。",
+            "short_en": "white-capped water bottle",
+            "detailed_en": "A clear plastic water bottle with a white cap and white label, placed in front of the junction between the two monitor screens."
             },
             {
             "object_id": 4,
@@ -572,10 +572,10 @@
             {
             "object_id": 4,
             "difficulty": "不容易找到 (Hard)",
-            "short_zh": "灰色圆形带盖餐盒",
-            "detailed_zh": "叠放在红色泡面桶旁边、由上下两个灰色圆形碗状结构扣合在一起的亚光材质储物盒或餐盒。",
-            "short_en": "grey round container with lid",
-            "detailed_en": "The matte storage box or lunch box formed by clasping two grey round bowl-like structures together, stacked right next to the red instant noodle cup."
+            "short_zh": "显示器包装盒",
+            "detailed_zh": "放在沙发后面、靠墙的表面为褐色的大型长方形纸箱,箱面上印有显示器的图片和品牌Logo。",
+            "short_en": "monitor packaging box",
+            "detailed_en": "The large rectangular cardboard box with a brown surface, placed behind the sofa against the wall, featuring a picture of a monitor and a brand logo on its face."
             },
             {
             "object_id": 5,

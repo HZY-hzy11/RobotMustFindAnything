@@ -111,7 +111,7 @@ def create_task(image_path, prompt_text):
         raise RuntimeError(f"API 逻辑错误: {resp_data.get('msg')}")
 
 
-def poll_and_parse_result(task_uuid, timeout=120, poll_interval=3):
+def poll_and_parse_result(task_uuid, timeout=120, poll_interval=0.3):
     """
     循环查询任务状态，直到任务完成、失败或超时。自动从环境变量读取 Token。
     
@@ -207,14 +207,17 @@ def draw_bboxes_on_image_opencv(image_path, objects, output_prefix="_detected"):
 # =================================================================
 if __name__ == "__main__":
     # 定义测试用的本地变量
-    TEST_IMAGE_PATH = "2_resized.jpg"  
+    TEST_IMAGE_PATH = "../benchmark/example/2.jpg"  
     TEST_PROMPT_TEXT = "平铺散落在床边木质柜子平整台面上的几张淡黄色的方形薄纸片"  
 
     try:
         # 提交任务
         task_id = create_task(TEST_IMAGE_PATH, TEST_PROMPT_TEXT)
+        t1 = time.time()
         # 轮询获取结果
-        detected_objects = poll_and_parse_result(task_id)
+        detected_objects = poll_and_parse_result(task_id, poll_interval=0.1)
+        t2 = time.time()
+        print(f"[*] 从提交到获取结果总耗时: {t2 - t1:.2f} 秒")
 
         if detected_objects:
             print(f"[*] 正在在原图上绘制 {len(detected_objects)} 个 BBox...")
