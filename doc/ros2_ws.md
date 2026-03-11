@@ -1,6 +1,6 @@
 # ROS2 工作空间 — Livox 雷达 & FAST-LIO2
 
-本文档描述 `rofa/ros_ws/` 工作空间的功能模块和使用方法。环境安装请参考项目根目录 [README.md](../README.md)。
+本文档描述 `rofa/ros_ws2/` 工作空间的功能模块和使用方法。环境安装请参考项目根目录 [README.md](../README.md)。
 
 ## 模块组成
 
@@ -12,7 +12,7 @@
 
 ## 使用方法
 
-> 以下命令均在 `rofa/ros_ws/` 目录下执行，且假设已完成编译（`colcon build`）。
+> 以下命令均在 `rofa/ros_ws2/` 目录下执行，且假设已完成编译（`colcon build`）。
 
 ### 1. 测试雷达数据获取
 
