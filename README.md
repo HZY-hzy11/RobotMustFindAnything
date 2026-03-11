@@ -19,6 +19,7 @@ RobotMustFindAnything/
     ├── aruco/              # ArUco 标记检测模块
     ├── sam3/               # SAM3 语义分割模块
     ├── llm/                # LLM 推理模块（基于 SiliconFlow）
+    ├── dinox/              # DINO-X 模块（基于 deepdataspace的DINO-X 开放平台）
     └── ros_ws/             # ROS2 工作空间 (Livox 驱动 + FAST-LIO2)
 ```
 
@@ -68,6 +69,20 @@ LLM 模块配置
 
 ```bash
 export SILICONFLOW_API_KEY="your_api_key_here"
+```
+
+DINO-X 模块配置
+
+> DINO-X 模块用于强鲁棒性和高精度的开放词汇物体检测。
+
+##### 获取 deepdataspace 的 DINO-X 开放平台 API Key
+
+1. 访问 [DINO-X 开放平台 官网](https://cloud.deepdataspace.com/zh/playground/dino-x)
+2. 注册账户并获取 API Key
+3. 设置环境变量：
+
+```bash
+export DINO_API_TOKEN="your_api_key_here"
 ```
 
 ### 2. ROS 2 环境
