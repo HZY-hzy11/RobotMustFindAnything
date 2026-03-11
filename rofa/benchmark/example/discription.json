@@ -146,5 +146,446 @@
             }
         ]
     },
-    
+    {
+        "image_filename": "4.jpg",
+        "scene_understanding": {
+            "description_zh": "这是一个杂乱的室内空间，看起来像是一个兼作卧室的办公室。一张玻璃桌面上堆满了笔记本电脑、外接键盘、鼠标垫、风扇、纸巾盒以及各种饮料瓶和数据线。背景中有一张单人床，床上躺着一个假人模型，左侧的办公椅上也坐着另一个假人模型，右侧则有一张皮沙发。",
+            "description_en": "This is a cluttered indoor space that appears to function as both a bedroom and an office. A glass table is heavily laden with a laptop, external keyboard, mousepad, fan, tissue box, along with various beverage bottles and charging cables. In the background, there is a single bed with a mannequin lying on it, another mannequin sitting on an office chair to the left, and a leather sofa on the right."
+        },
+        "object_descriptions": [
+            {
+            "object_id": 1,
+            "difficulty": "容易找到 (Easy)",
+            "short_zh": "卡通鼠标垫",
+            "detailed_zh": "放在黑色外接键盘旁边的一块印有黄色卡通动物大头图案的色彩鲜艳的鼠标垫。",
+            "short_en": "cartoon mousepad",
+            "detailed_en": "A brightly colored mousepad printed with a large yellow cartoon animal head pattern, placed next to the black external keyboard."
+            },
+            {
+            "object_id": 2,
+            "difficulty": "容易找到 (Easy)",
+            "short_zh": "浅绿色大保温杯",
+            "detailed_zh": "放在玻璃桌面靠近沙发那一侧的一个带有提手装置的大容量浅绿色不锈钢保温杯。",
+            "short_en": "large light green tumbler",
+            "detailed_en": "A large-capacity light green stainless steel tumbler with a handle mechanism, placed on the glass tabletop near the sofa side."
+            },
+            {
+            "object_id": 3,
+            "difficulty": "中等 (Medium)",
+            "short_zh": "白色桌面小风扇",
+            "detailed_zh": "摆放在桌面上几瓶饮料和一堆杂乱的白色充电头旁边的一台带有圆形底座的白色网罩迷你电风扇。",
+            "short_en": "white desk fan",
+            "detailed_en": "A white mini electric fan with a circular base and mesh cover, placed on the desk next to a few beverage bottles and a messy pile of white charging blocks."
+            },
+            {
+            "object_id": 4,
+            "difficulty": "不容易找到 (Hard)",
+            "short_zh": "黄色小摆件",
+            "detailed_zh": "躲在笔记本电脑屏幕后方、紧挨着一个透明玻璃空瓶放置的微型黄色卡通小人摆件。",
+            "short_en": "small yellow figurine",
+            "detailed_en": "A miniature yellow cartoon figurine hiding behind the laptop screen, placed right next to an empty clear glass bottle."
+            },
+            {
+            "object_id": 5,
+            "difficulty": "不容易找到 (Hard)",
+            "short_zh": "粉色拖鞋",
+            "detailed_zh": "穿在坐在办公椅上的那个人体模型左脚上的一只粉色塑料凉拖鞋。",
+            "short_en": "pink slipper",
+            "detailed_en": "A pink plastic slide slipper worn on the left foot of the mannequin sitting on the office chair."
+            }
+        ]
+    },
+    {
+        "image_filename": "5.jpg",
+        "scene_understanding": {
+            "description_zh": "这是一个室内角落场景，靠墙摆放着一台白色滚筒洗衣机，上方放着一瓶鲜艳的插花。洗衣机旁边的一把黑色办公椅上，坐着一个造型奇特的人体模型，它戴着灰色卷发和墨镜，穿着酒红色T恤和蓝色短裤，背景有窗户和深色窗帘。",
+            "description_en": "This is an indoor corner scene featuring a white front-loading washing machine placed against the wall, with a vase of vibrant flowers on top of it. Sitting on a black office chair next to the washing machine is a peculiarly styled mannequin wearing a grey curly wig, sunglasses, a maroon t-shirt, and blue shorts, with a window and dark curtains in the background."
+        },
+        "object_descriptions": [
+            {
+            "object_id": 1,
+            "difficulty": "容易找到 (Easy)",
+            "short_zh": "酒红色短袖T恤",
+            "detailed_zh": "穿在坐在办公椅上的人体模型身上的一件印有白色“PEKING UNIVERSITY”英文字母的酒红色短袖T恤。",
+            "short_en": "maroon short-sleeved t-shirt",
+            "detailed_en": "A maroon short-sleeved t-shirt with white 'PEKING UNIVERSITY' English lettering worn by the mannequin sitting on the office chair."
+            },
+            {
+            "object_id": 2,
+            "difficulty": "容易找到 (Easy)",
+            "short_zh": "白色滚筒洗衣机",
+            "detailed_zh": "靠墙摆放的一个带有圆形黑色舱门和顶部控制旋钮的白色外壳滚筒洗衣机。",
+            "short_en": "white front-loading washing machine",
+            "detailed_en": "A white front-loading washing machine with a circular black door and top control knobs, placed against the wall."
+            },
+            {
+            "object_id": 3,
+            "difficulty": "中等 (Medium)",
+            "short_zh": "蓝色玻璃花瓶",
+            "detailed_zh": "平稳放置在白色洗衣机顶部正中央的那个插着许多颜色各异的人造花朵的深蓝色透明玻璃花瓶。",
+            "short_en": "blue glass vase",
+            "detailed_en": "A dark blue transparent glass vase containing many artificial flowers of various colors, placed steadily in the top center of the white washing machine."
+            },
+            {
+            "object_id": 4,
+            "difficulty": "中等 (Medium)",
+            "short_zh": "黑色墨镜",
+            "detailed_zh": "戴在人体模型脸部、被灰白色的蓬松卷曲假发稍微遮挡住的一副黑色边框墨镜。",
+            "short_en": "black sunglasses",
+            "detailed_en": "A pair of black-framed sunglasses worn on the mannequin's face, slightly obscured by a fluffy grey curly wig."
+            },
+            {
+            "object_id": 5,
+            "difficulty": "不容易找到 (Hard)",
+            "short_zh": "蓝色电源插头",
+            "detailed_zh": "插在洗衣机侧后方墙壁白色插座面板上的那个连着黑色线缆的蓝色塑料电源插头。",
+            "short_en": "blue power plug",
+            "detailed_en": "A blue plastic power plug connected to a black cable, plugged into the white wall outlet panel behind and to the side of the washing machine."
+            }
+        ]
+    },
+    {
+        "image_filename": "6.jpg",
+        "scene_understanding": {
+            "description_zh": "这是一个非常反常规的室内空间，一个白色的马桶和一个白色的立柱式洗手池被直接放置在了一个装满饮料的商用冷藏展示柜旁边，旁边还能看到铺着黑白格子桌布的台面一角。",
+            "description_en": "This is a highly unconventional indoor space where a white toilet and a white pedestal sink are placed directly next to a commercial refrigerated display case filled with beverages. A corner of a surface covered with a black-and-white checkered tablecloth is also visible nearby."
+        },
+        "object_descriptions": [
+            {
+            "object_id": 1,
+            "difficulty": "容易找到 (Easy)",
+            "short_zh": "白色马桶",
+            "detailed_zh": "紧挨着装满饮料的冷藏展示柜侧面摆放的一个盖着盖子的白色陶瓷马桶。",
+            "short_en": "white toilet",
+            "detailed_en": "A white ceramic toilet with its lid closed, placed right next to the side of the refrigerated display case filled with drinks."
+            },
+            {
+            "object_id": 2,
+            "difficulty": "容易找到 (Easy)",
+            "short_zh": "立柱式洗手池",
+            "detailed_zh": "放置在马桶旁边靠墙位置的一个还没有安装水龙头的白色陶瓷立柱式洗手池。",
+            "short_en": "pedestal sink",
+            "detailed_en": "A white ceramic pedestal sink without a faucet installed, placed against the wall next to the toilet."
+            },
+            {
+            "object_id": 3,
+            "difficulty": "中等 (Medium)",
+            "short_zh": "红色易拉罐",
+            "detailed_zh": "放在冷藏展示柜最下层、紧挨着一罐黄色饮料旁边的那罐带有醒目白色字母的红色金属易拉罐。",
+            "short_en": "red can",
+            "detailed_en": "The red metal can with prominent white letters placed on the bottom shelf of the refrigerated display case, right next to a yellow beverage can."
+            },
+            {
+            "object_id": 4,
+            "difficulty": "不容易找到 (Hard)",
+            "short_zh": "洗手池下水口",
+            "detailed_zh": "那个位于白色陶瓷洗手池盆底最低处的圆形排水孔洞。",
+            "short_en": "sink drain hole",
+            "detailed_en": "The circular drain hole located at the lowest point of the basin in the white ceramic sink."
+            },
+            {
+            "object_id": 5,
+            "difficulty": "不容易找到 (Hard)",
+            "short_zh": "马桶水箱贴纸",
+            "detailed_zh": "贴在白色马桶水箱正面偏中间位置的一张带有图案的细长方形小贴纸。",
+            "short_en": "toilet tank sticker",
+            "detailed_en": "A small, narrow rectangular sticker with a pattern, affixed near the center on the front of the white toilet tank."
+            }
+        ]
+    },
+    {
+        "image_filename": "7.jpg",
+        "scene_understanding": {
+            "description_zh": "这是一个稍显拥挤的办公室角落场景。白色的带抽屉储物柜上放置着一台黑色的打印机，柜子下方及旁边的地面上堆放着多个装有打印纸和杂物的纸箱。紧挨着柜子是一面带有金属边框的工位挡板，透过挡板可以看到办公桌上摆放着显示器、笔记本电脑以及几瓶饮用水。",
+            "description_en": "This is a slightly crowded office corner scene. A black printer sits on a white storage cabinet with a drawer, while multiple cardboard boxes containing printer paper and miscellaneous items are piled on the floor below and beside it. Right next to the cabinet is a cubicle partition with a metal frame, through which a monitor, a laptop, and several bottles of drinking water can be seen on the desk."
+        },
+        "object_descriptions": [
+            {
+            "object_id": 1,
+            "difficulty": "容易找到 (Easy)",
+            "short_zh": "蓝白色打印纸盒",
+            "detailed_zh": "平放在地面棕色大纸箱顶部的一盒印有醒目“Double A”字样的蓝白配色A4打印纸包装盒。",
+            "short_en": "blue and white printer paper box",
+            "detailed_en": "A blue and white A4 printer paper packaging box with prominent 'Double A' lettering, resting flat on top of a large brown cardboard box on the floor."
+            },
+            {
+            "object_id": 2,
+            "difficulty": "容易找到 (Easy)",
+            "short_zh": "黑色打印机",
+            "detailed_zh": "放置在白色储物柜台面上的一台顶部散落着几张白纸的黑色多功能办公打印机。",
+            "short_en": "black printer",
+            "detailed_en": "A black multi-function office printer with a few sheets of white paper scattered on its top, placed on the surface of the white storage cabinet."
+            },
+            {
+            "object_id": 3,
+            "difficulty": "中等 (Medium)",
+            "short_zh": "红盖矿泉水瓶",
+            "detailed_zh": "放置在工位挡板后方的办公桌面上、紧挨着另一瓶大瓶装水摆放的那个带有红色瓶盖和红色标签的透明塑料水瓶。",
+            "short_en": "red-capped water bottle",
+            "detailed_en": "A clear plastic water bottle with a red cap and a red label, placed on the desk behind the cubicle partition, right next to another large bottle of water."
+            },
+            {
+            "object_id": 4,
+            "difficulty": "不容易找到 (Hard)",
+            "short_zh": "白色长条形管状物",
+            "detailed_zh": "一端抵在地面、整体斜靠在白色储物柜侧面和办公区工位挡板之间的一个细长的白色长条形管状物体。",
+            "short_en": "long white tubular object",
+            "detailed_en": "A slender, long white tubular object with one end resting on the floor, leaning diagonally between the side of the white storage cabinet and the office cubicle partition."
+            },
+            {
+            "object_id": 5,
+            "difficulty": "不容易找到 (Hard)",
+            "short_zh": "黑色电源插头",
+            "detailed_zh": "插在靠近地面纸箱堆左侧的白色墙壁面板插座上的那个带着一段黑色线缆的黑色电源插座头。",
+            "short_en": "black power plug",
+            "detailed_en": "A black power plug with a segment of black cable attached, inserted into the white wall outlet panel to the left of the cardboard boxes near the floor."
+            }
+        ]
+    },
+    {
+        "image_filename": "8.jpg",
+        "scene_understanding": {
+            "description_zh": "这是一个典型的现代办公桌位场景，L型白色办公桌面上摆放着双显示器、键盘、鼠标、闭合的笔记本电脑以及几瓶饮料和小零食，桌下有一台亮着RGB灯效的电脑主机，桌子一侧放着一个黑色双肩包，前方有一把黑色办公椅。",
+            "description_en": "This is a typical modern office workstation scene. An L-shaped white desk holds dual monitors, a keyboard, mice, a closed laptop, and several beverage bottles and snacks. Under the desk is a computer tower with RGB lighting, a black backpack is placed on one side of the desk, and a black office chair is positioned in front."
+        },
+        "object_descriptions": [
+            {
+            "object_id": 1,
+            "difficulty": "容易找到 (Easy)",
+            "short_zh": "橘色饮料瓶",
+            "detailed_zh": "放在显示着紫红色水母壁纸的显示器正下方的一个装有橘黄色液体并带有黄色瓶盖的透明塑料瓶。",
+            "short_en": "orange beverage bottle",
+            "detailed_en": "A clear plastic bottle containing orange liquid with a yellow cap, placed directly under the monitor displaying a purple jellyfish wallpaper."
+            },
+            {
+            "object_id": 2,
+            "difficulty": "容易找到 (Easy)",
+            "short_zh": "黑色双肩包",
+            "detailed_zh": "放在办公桌靠隔板那一侧、紧挨着显示着网页文档的显示器摆放的那个鼓鼓囊囊的黑色帆布双肩背包。",
+            "short_en": "black backpack",
+            "detailed_en": "The bulging black canvas backpack placed on the desk near the partition, right next to the monitor displaying a web page document."
+            },
+            {
+            "object_id": 3,
+            "difficulty": "中等 (Medium)",
+            "short_zh": "绿盖矿泉水瓶",
+            "detailed_zh": "放置在两台显示器屏幕中间交界处前方的那个带有绿色瓶盖和绿色标签的透明塑料矿泉水瓶。",
+            "short_en": "green-capped water bottle",
+            "detailed_en": "A clear plastic water bottle with a green cap and green label, placed in front of the junction between the two monitor screens."
+            },
+            {
+            "object_id": 4,
+            "difficulty": "不容易找到 (Hard)",
+            "short_zh": "电脑主机箱",
+            "detailed_zh": "放置在白色L型办公桌下方地面上、内部透出红蓝紫渐变RGB灯光的黑色方形电脑主机箱。",
+            "short_en": "computer tower case",
+            "detailed_en": "A black square computer tower case placed on the floor under the white L-shaped desk, emitting red, blue, and purple gradient RGB lights from inside."
+            },
+            {
+            "object_id": 5,
+            "difficulty": "不容易找到 (Hard)",
+            "short_zh": "黑色电源适配器",
+            "detailed_zh": "搁置在闭合的深灰色笔记本电脑金属外壳上、连着一堆黑色散乱线缆的那个长方体黑色电源适配器模块。",
+            "short_en": "black power adapter",
+            "detailed_en": "A rectangular black power adapter brick attached to a bunch of scattered black cables, resting on the metal cover of the closed dark grey laptop."
+            }
+        ]
+    },
+    {
+        "image_filename": "9.jpg",
+        "scene_understanding": {
+            "description_zh": "这是一个堆满各种设备和个人物品的办公桌位。L型的白色桌面上摆放着多台显示器、键盘、鼠标和头戴式耳机。桌面的一侧展示着几个动漫手办和装在透明盒子里的拼搭玩具，桌下有一台黑色的电脑主机，前方放置着一把黑色的网眼人体工学办公椅。",
+            "description_en": "This is an office workstation crowded with various devices and personal items. Multiple monitors, a keyboard, a mouse, and an over-ear headset are placed on the L-shaped white desk. One side of the desk displays several anime figures and a building block toy in a clear case, with a black computer tower on the floor underneath and a black mesh ergonomic office chair positioned in front."
+        },
+        "object_descriptions": [
+            {
+            "object_id": 1,
+            "difficulty": "容易找到 (Easy)",
+            "short_zh": "蓝色壁纸显示器",
+            "detailed_zh": "屏幕亮着并且显示着带有时间和日期的蓝色波浪图案壁纸的那台电脑显示器。",
+            "short_en": "monitor with blue wallpaper",
+            "detailed_en": "The computer monitor with its screen turned on, displaying a blue wavy pattern wallpaper along with the time and date."
+            },
+            {
+            "object_id": 2,
+            "difficulty": "容易找到 (Easy)",
+            "short_zh": "黑色头戴式耳机",
+            "detailed_zh": "随意平放在带有巨大白色字母Logo的黑色鼠标垫上的那副黑色头戴式隔音耳机。",
+            "short_en": "black over-ear headset",
+            "detailed_en": "The pair of black over-ear noise-canceling headphones lying casually flat on the black mousepad featuring a large white letter logo."
+            },
+            {
+            "object_id": 3,
+            "difficulty": "中等 (Medium)",
+            "short_zh": "透明积木展示盒",
+            "detailed_zh": "摆放在办公桌边缘、内部装有一个由拼搭积木组成的宇航员模型的透明亚克力方形展示罩。",
+            "short_en": "clear block display case",
+            "detailed_en": "A clear acrylic square display cover placed near the edge of the desk, containing an astronaut model made of building blocks inside."
+            },
+            {
+            "object_id": 4,
+            "difficulty": "不容易找到 (Hard)",
+            "short_zh": "花纹陶瓷杯",
+            "detailed_zh": "放置在白色机械键盘侧后方、带着配套底碟并且杯身印有黑色花纹图案的陶瓷杯。",
+            "short_en": "patterned ceramic cup",
+            "detailed_en": "A ceramic cup with black patterned designs on its body and a matching saucer, positioned to the side and slightly behind the white mechanical keyboard."
+            },
+            {
+            "object_id": 5,
+            "difficulty": "不容易找到 (Hard)",
+            "short_zh": "白色无线鼠标",
+            "detailed_zh": "放置在黑色鼠标垫上、刚好介于那副黑色头戴式耳机和一盒白色纸巾之间的小型白色无线鼠标。",
+            "short_en": "white wireless mouse",
+            "detailed_en": "A small white wireless mouse placed on the black mousepad, situated exactly between the pair of black over-ear headphones and a box of white tissues."
+            }
+        ]
+    },
+    {
+        "image_filename": "10.jpg",
+        "scene_understanding": {
+            "description_zh": "这是一个典型的现代多屏办公桌场景，白色的L型桌面上摆放着三台状态各异的显示器、键盘和鼠标，且铺着一张带有风景图案的大号鼠标垫。桌面上还散落着粉色水杯、头戴式耳机、红色笔记本以及一个放置了各种零食和杂物的黑色桌面增高架，前方有一把灰黑配色的办公椅。",
+            "description_en": "This is a typical modern multi-monitor office desk scene. An L-shaped white desk holds three monitors in various states, a keyboard, and a mouse, resting on a large mousepad with a landscape pattern. Scattered across the desk are a pink tumbler, an over-ear headset, a red notebook, and a black desktop riser shelf holding various snacks and miscellaneous items, with a grey and black office chair in front."
+        },
+        "object_descriptions": [
+            {
+            "object_id": 1,
+            "difficulty": "容易找到 (Easy)",
+            "short_zh": "粉色带吸管保温杯",
+            "detailed_zh": "放置在黑色长条形键盘旁边、带有一个黑色把手和一根吸管的高个子浅粉色不锈钢保温杯。",
+            "short_en": "pink tumbler with straw",
+            "detailed_en": "A tall, light pink stainless steel tumbler with a black handle and a straw, placed next to the long black keyboard."
+            },
+            {
+            "object_id": 2,
+            "difficulty": "容易找到 (Easy)",
+            "short_zh": "粉白配色头戴式耳机",
+            "detailed_zh": "随意平放在带有风景图案的大鼠标垫上、带着一根麦克风杆的粉白相间头戴式游戏耳机。",
+            "short_en": "pink and white over-ear headset",
+            "detailed_en": "A pink and white over-ear gaming headset with a microphone boom, lying casually flat on the large landscape-patterned mousepad."
+            },
+            {
+            "object_id": 3,
+            "difficulty": "中等 (Medium)",
+            "short_zh": "红色硬皮书本",
+            "detailed_zh": "压在一条白色长线缆下方、紧挨着那副粉白配色头戴式耳机摆放的红色硬质封面笔记本。",
+            "short_en": "red hardcover notebook",
+            "detailed_en": "A red hardcover notebook resting right next to the pink and white headset, partially pinned under a long white cable."
+            },
+            {
+            "object_id": 4,
+            "difficulty": "不容易找到 (Hard)",
+            "short_zh": "白色印花马克杯",
+            "detailed_zh": "放置在白色办公桌台面最外侧边缘、杯身印有橙色水果图案的白色陶瓷马克杯。",
+            "short_en": "white patterned mug",
+            "detailed_en": "A white ceramic mug with orange fruit patterns on its body, placed on the outermost edge of the white office desk surface."
+            },
+            {
+            "object_id": 5,
+            "difficulty": "不容易找到 (Hard)",
+            "short_zh": "红色零食包装袋",
+            "detailed_zh": "散落在黑色桌面增高架边缘处的一小包红色塑料包装的零食。",
+            "short_en": "red snack packet",
+            "detailed_en": "A small red plastic snack packet scattered on the edge of the black desktop riser shelf."
+            }
+        ]
+    },
+    {
+        "image_filename": "11.jpg",
+        "scene_understanding": {
+            "description_zh": "这是一个非常杂乱的室内角落场景，似乎正在进行物品整理或搬迁。画面中有一张灰色的布艺沙发，旁边靠墙堆放着许多大大小小的硬纸板箱、一个装满物品的大号牛皮纸袋和一个小型银色双门冰箱。窗户旁边的桌子或置物架上密集地堆满了书籍、零食包装、电源线和各类生活杂物。",
+            "description_en": "This is a highly cluttered indoor corner scene, appearing to be in the midst of organizing or moving. The frame features a grey fabric sofa, next to which are stacked numerous large and small cardboard boxes, a large brown paper bag filled with items, and a small silver double-door refrigerator against the wall. A desk or shelf near the window is densely packed with books, snack packaging, power cables, and various daily sundries."
+        },
+        "object_descriptions": [
+            {
+            "object_id": 1,
+            "difficulty": "容易找到 (Easy)",
+            "short_zh": "浅绿色方形抱枕",
+            "detailed_zh": "平稳地放置在灰色布艺沙发的浅蓝色圆形坐垫上面的那个浅绿色方形布面抱枕。",
+            "short_en": "light green square throw pillow",
+            "detailed_en": "The light green square fabric throw pillow placed steadily on top of the light blue round cushion on the grey fabric sofa."
+            },
+            {
+            "object_id": 2,
+            "difficulty": "容易找到 (Easy)",
+            "short_zh": "小型银色冰箱",
+            "detailed_zh": "靠墙摆放在那堆高高的硬纸板箱旁边、顶部放着一个白色塑料储物盒的银色双门迷你冰箱。",
+            "short_en": "small silver refrigerator",
+            "detailed_en": "The silver double-door mini refrigerator placed against the wall next to the tall stack of cardboard boxes, with a white plastic storage box resting on its top."
+            },
+            {
+            "object_id": 3,
+            "difficulty": "中等 (Medium)",
+            "short_zh": "透明矿泉水瓶",
+            "detailed_zh": "孤零零地立在白色窗台边缘、紧挨着玻璃窗格的一瓶带有蓝色标签的透明塑料矿泉水。",
+            "short_en": "clear water bottle",
+            "detailed_en": "A clear plastic water bottle with a blue label standing alone on the edge of the white windowsill, right next to the glass windowpane."
+            },
+            {
+            "object_id": 4,
+            "difficulty": "不容易找到 (Hard)",
+            "short_zh": "黑色电源适配器",
+            "detailed_zh": "放置在靠墙那个堆满杂物的桌面上、压在几本书籍和纸张上面的那个长方体黑色电源适配器模块。",
+            "short_en": "black power adapter",
+            "detailed_en": "A rectangular black power adapter block placed on the cluttered desk against the wall, resting on top of a few books and papers."
+            },
+            {
+            "object_id": 5,
+            "difficulty": "不容易找到 (Hard)",
+            "short_zh": "红色泡面桶",
+            "detailed_zh": "挤在桌面上杂乱的包装纸袋和透明塑料盒之间、带有黄色图案的红色圆形方便面纸桶。",
+            "short_en": "red instant noodle cup",
+            "detailed_en": "A red circular instant noodle paper cup with yellow patterns, squeezed between messy paper packaging bags and clear plastic boxes on the desk."
+            }
+        ]
+    },
+    {
+        "image_filename": "12.jpg",
+        "scene_understanding": {
+            "description_zh": "这是一个极其杂乱的室内书桌或置物台场景，紧挨着灰色布艺沙发和金属文件柜。桌面上堆满了书籍、文件收纳盒、靠垫、颈枕，以及泡面、饮料瓶、水杯等各类生活和办公杂物，后方靠墙还立着几个大型的电子产品包装纸箱。",
+            "description_en": "This is an extremely cluttered indoor desk or utility table scene, situated right next to a grey fabric sofa and a metal filing cabinet. The tabletop is piled high with books, a file organizer, cushions, a neck pillow, as well as various daily and office sundries like instant noodles, beverage bottles, and mugs, with several large electronic product packaging boxes standing against the wall behind it."
+        },
+        "object_descriptions": [
+            {
+            "object_id": 1,
+            "difficulty": "容易找到 (Easy)",
+            "short_zh": "红色泡面桶",
+            "detailed_zh": "放置在杂乱桌面边缘、紧挨着灰色布艺沙发靠背的那个印有黄色字体的红色圆形方便面纸桶。",
+            "short_en": "red instant noodle cup",
+            "detailed_en": "The red circular instant noodle paper cup with yellow text, placed on the edge of the cluttered desk right next to the backrest of the grey fabric sofa."
+            },
+            {
+            "object_id": 2,
+            "difficulty": "容易找到 (Easy)",
+            "short_zh": "带盖白色水杯",
+            "detailed_zh": "放在灰色金属文件柜台面上、旁边散落着几根吸管和饮料瓶的那个带有同色系盖子和把手的白色水杯。",
+            "short_en": "white mug with lid",
+            "detailed_en": "The white mug with a matching lid and handle, placed on the surface of the grey metal filing cabinet with a few straws and beverage bottles scattered nearby."
+            },
+            {
+            "object_id": 3,
+            "difficulty": "中等 (Medium)",
+            "short_zh": "U型颈枕",
+            "detailed_zh": "倚靠在黑色人体工学靠背垫前方、表面为浅蓝色和深蓝色拼接设计的柔软U型护颈枕。",
+            "short_en": "U-shaped neck pillow",
+            "detailed_en": "The soft U-shaped neck pillow with a light blue and dark blue spliced design, leaning against the front of a black ergonomic back cushion."
+            },
+            {
+            "object_id": 4,
+            "difficulty": "不容易找到 (Hard)",
+            "short_zh": "灰色圆形带盖餐盒",
+            "detailed_zh": "叠放在红色泡面桶旁边、由上下两个灰色圆形碗状结构扣合在一起的亚光材质储物盒或餐盒。",
+            "short_en": "grey round container with lid",
+            "detailed_en": "The matte storage box or lunch box formed by clasping two grey round bowl-like structures together, stacked right next to the red instant noodle cup."
+            },
+            {
+            "object_id": 5,
+            "difficulty": "不容易找到 (Hard)",
+            "short_zh": "黄盖塑料瓶",
+            "detailed_zh": "挤在白色水杯和一堆杂乱的文具之间、带有一个醒目黄色塑料盖的透明饮料瓶。",
+            "short_en": "yellow-capped plastic bottle",
+            "detailed_en": "A clear beverage bottle with a conspicuous yellow plastic cap, squeezed between the white mug and a messy pile of stationery."
+            }
+        ]
+    }
+
 ]
