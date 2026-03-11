@@ -1,0 +1,150 @@
+[
+    {
+        "image_filename": "1.jpg",
+        "scene_understanding": {
+            "description_zh": "这是一个摆满各种瓶装和盒装饮料的商用冷藏展示柜或自动售货机的内部货架，饮料种类繁多，包括果汁、奶制品、茶饮和碳酸饮料等，包装形态各异。",
+            "description_en": "This is the interior shelving of a commercial refrigerated display case or vending machine, fully stocked with a wide variety of bottled and carton beverages, including juices, dairy products, teas, and sodas in various packaging types."
+        },
+        "object_descriptions": [
+            {
+            "object_id": 1,
+            "difficulty": "容易找到 (Easy)",
+            "short_zh": "AMX蓝色酸奶瓶",
+            "detailed_zh": "一瓶包装主要是深蓝色且印有醒目白色大写英文字母“AMX”的细长型塑料酸奶饮料。",
+            "short_en": "AMX blue yogurt bottle",
+            "detailed_en": "A slender plastic yogurt drink bottle with primarily dark blue packaging and prominent white uppercase English letters 'AMX' printed on it."
+            },
+            {
+            "object_id": 2,
+            "difficulty": "容易找到 (Easy)",
+            "short_zh": "黄色柠檬茶纸盒",
+            "detailed_zh": "一个长方体的黄色纸盒装茶饮料，包装上印有绿色的叶子图案和显眼的深色粗体文字。",
+            "short_en": "yellow lemon tea carton",
+            "detailed_en": "A rectangular yellow carton tea beverage with green leaf patterns and conspicuous bold dark text printed on the packaging."
+            },
+            {
+            "object_id": 3,
+            "difficulty": "中等 (Medium)",
+            "short_zh": "贴着吸管的纸盒饮料",
+            "detailed_zh": "一盒正面斜贴着一根带着透明塑料外包装的白色细长吸管的浅色方形纸盒饮品。",
+            "short_en": "carton drink with an attached straw",
+            "detailed_en": "A light-colored square carton drink with a long, thin white straw in a clear plastic wrapper taped diagonally across its front."
+            },
+            {
+            "object_id": 4,
+            "difficulty": "不容易找到 (Hard)",
+            "short_zh": "红色细长易拉罐",
+            "detailed_zh": "一罐体积较小、通体红色的细长圆柱形金属易拉罐装饮料，夹杂在众多纸盒包装之间。",
+            "short_en": "slender red can",
+            "detailed_en": "A relatively small, slender, cylindrical red metal can beverage, interspersed among numerous carton packages."
+            },
+            {
+            "object_id": 5,
+            "difficulty": "不容易找到 (Hard)",
+            "short_zh": "黑色长尾夹",
+            "detailed_zh": "一个夹在透明塑料挡板边缘处的黑色金属长尾票夹，带有两个银色的金属把手。",
+            "short_en": "black binder clip",
+            "detailed_en": "A black metal binder clip attached to the edge of a clear plastic baffle, featuring two silver metal handles."
+            }
+        ]
+    },
+    {
+        "image_filename": "2.jpg",
+        "scene_understanding": {
+            "description_zh": "这是一个布置成卧室的场景，一张铺着蓝色格子床单的单人床上躺着一个男性人体模型。模型穿着深蓝色T恤、戴着帽子，身上盖着带有花纹的浅褐色被子。床边有一个木制床头柜，上面放着一瓶花和几张纸片，背景是深色的窗帘。",
+            "description_en": "This is a bedroom-like scene featuring a male mannequin lying on a single bed with a blue checkered bedsheet. The mannequin is wearing a dark blue t-shirt and a hat, covered with a light brown patterned blanket. Next to the bed is a wooden nightstand holding a vase of flowers and some pieces of paper, with dark curtains in the background."
+        },
+        "object_descriptions": [
+            {
+            "object_id": 1,
+            "difficulty": "容易找到 (Easy)",
+            "short_zh": "深蓝色短袖T恤",
+            "detailed_zh": "穿在人体模型身上的一件印有醒目的白色“PEKING UNIVERSITY”英文字母的深蓝色短袖T恤。",
+            "short_en": "dark blue t-shirt",
+            "detailed_en": "A dark blue short-sleeved t-shirt with prominent white 'PEKING UNIVERSITY' English lettering worn by the mannequin."
+            },
+            {
+            "object_id": 2,
+            "difficulty": "容易找到 (Easy)",
+            "short_zh": "玻璃花瓶",
+            "detailed_zh": "放在木制床头柜上的一个插着多朵色彩鲜艳的人造花束的深色圆形玻璃花瓶。",
+            "short_en": "glass vase",
+            "detailed_en": "A dark, round glass vase containing a colorful bouquet of artificial flowers, placed on the wooden nightstand."
+            },
+            {
+            "object_id": 3,
+            "difficulty": "中等 (Medium)",
+            "short_zh": "灰色贝雷帽",
+            "detailed_zh": "戴在假人模型头上的一顶带有细微毛呢质感的灰色复古风贝雷帽。",
+            "short_en": "grey beret",
+            "detailed_en": "A grey vintage-style beret with a subtle woolen texture worn on the head of the dummy model."
+            },
+            {
+            "object_id": 4,
+            "difficulty": "不容易找到 (Hard)",
+            "short_zh": "小熊图案",
+            "detailed_zh": "印在浅褐色印花被套边缘处的一个小巧的棕色卡通小熊头部图案。",
+            "short_en": "bear pattern",
+            "detailed_en": "A small brown cartoon bear head pattern printed near the edge of the light brown printed duvet cover."
+            },
+            {
+            "object_id": 5,
+            "difficulty": "不容易找到 (Hard)",
+            "short_zh": "方形纸片",
+            "detailed_zh": "平铺散落在床边木质柜子平整台面上的几张淡黄色的方形薄纸片中的一张。",
+            "short_en": "square piece of paper",
+            "detailed_en": "One of the few light yellow square pieces of thin paper scattered flat on the smooth surface of the wooden cabinet next to the bed."
+            }
+        ]
+    },
+    {
+        "image_filename": "3.jpg",
+        "scene_understanding": {
+            "description_zh": "这是一个略显杂乱的室内台面场景，铺着黑白格子桌布的桌子上摆放着微波炉、保温壶、路由器以及一些零食和杂物，旁边还能看到洗手池的一角和一些拆开的包装材料。",
+            "description_en": "This is a somewhat cluttered indoor countertop scene. A table covered with a black-and-white checkered tablecloth holds a microwave, thermal carafes, a router, along with some snacks and miscellaneous items. A corner of a washbasin and some opened packaging materials are also visible nearby."
+        },
+        "object_descriptions": [
+            {
+            "object_id": 1,
+            "difficulty": "容易找到 (Easy)",
+            "short_zh": "不锈钢微波炉",
+            "detailed_zh": "一台表面带有反光玻璃门和右侧按键控制面板的银色不锈钢外壳微波炉。",
+            "short_en": "stainless steel microwave",
+            "detailed_en": "A silver stainless steel microwave with a reflective glass door and a button control panel on the right side."
+            },
+            {
+            "object_id": 2,
+            "difficulty": "容易找到 (Easy)",
+            "short_zh": "绿色保温壶",
+            "detailed_zh": "放在微波炉上方的一个带有把手和深色盖子的高个子浅绿色保温水壶。",
+            "short_en": "green thermal carafe",
+            "detailed_en": "A tall, light green thermal carafe with a handle and a dark lid, placed on top of the microwave."
+            },
+            {
+            "object_id": 3,
+            "difficulty": "中等 (Medium)",
+            "short_zh": "白色多天线路由器",
+            "detailed_zh": "亮着两颗蓝色指示灯并带有四根竖立天线的扁平状白色无线网络路由器。",
+            "short_en": "white multi-antenna router",
+            "detailed_en": "A flat white wireless network router with two glowing blue indicator lights and four upright antennas."
+            },
+            {
+            "object_id": 4,
+            "difficulty": "中等 (Medium)",
+            "short_zh": "黄色饼干盒",
+            "detailed_zh": "压在红色泡面桶上方的一盒印有饼干图案和黑色中文字体的黄色长方形纸质包装盒。",
+            "short_en": "yellow biscuit box",
+            "detailed_en": "A yellow rectangular paper packaging box printed with biscuit patterns and black Chinese characters, resting on top of a red instant noodle cup."
+            },
+            {
+            "object_id": 5,
+            "difficulty": "不容易找到 (Hard)",
+            "short_zh": "绿色胶棒",
+            "detailed_zh": "随意倒放在微波炉正前方的格子桌布上的一个带有白色盖子的小型绿色圆柱形胶棒。",
+            "short_en": "green glue stick",
+            "detailed_en": "A small green cylindrical glue stick with a white cap, lying casually on the checkered tablecloth directly in front of the microwave."
+            }
+        ]
+    },
+    
+]
