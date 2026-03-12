@@ -185,26 +185,3 @@ SAM3Segmentor(options=None)
         ▼
   SegmentResponse (统一结果)
 ```
-
----
-
-## 与 FALHv2 SemanticSegmentor 的关系
-
-本模块（`sam3_segmentor.py`）与 `FALHv2/falhv2/semantic_segmentor.py` 中的 `SemanticSegmentorSAM3` 实现了相同的核心功能，但作为独立模块存在于 `rofa/sam3/` 目录下：
-
-| 特性 | FALHv2 SemanticSegmentor | sam3_segmentor.py |
-|------|--------------------------|-------------------|
-| 位置 | `FALHv2/falhv2/` | `rofa/sam3/` |
-| 依赖 | 需要 FALHv2 整个框架 | 独立使用，仅依赖 SAM3 |
-| 接口 | `SemanticSegmentQuery/Response` | `SegmentQuery/Response/Result` |
-| 可视化 | 内置于 Response | 内置于 Response |
-| 命令行 | 无 | 支持 argparse |
-
----
-
-## 注意事项
-
-1. **GPU 显存**：SAM3 模型较大，推荐使用 8GB+ 显存的 GPU
-2. **首次运行**：模型权重会自动从 HuggingFace 下载并缓存
-3. **置信度阈值**：默认 0.5，可根据场景调整。阈值越低检测越多但可能有误检
-4. **mask 格式**：输出的 mask 为二值 `uint8` 数组（0 或 1），形状为 `(N, H, W)`

@@ -193,8 +193,17 @@ class SAM3Segmentor:
         resolution = self.options.get("resolution", 1008)
         confidence_threshold = self.options.get("confidence_threshold", 0.5)
 
+        # 手动定位 bpe_path，避免 pkg_resources 在非标准安装时找不到路径
+        sam3_module_dir = os.path.dirname(os.path.abspath(__file__))
+        bpe_path = os.path.join(
+            sam3_module_dir, "sam3_lib", "sam3", "sam3", "assets", "bpe_simple_vocab_16e6.txt.gz"
+        )
+        if not os.path.exists(bpe_path):
+            # fallback: 尝试 pkg_resources
+            bpe_path = None
+
         print(f"[SAM3Segmentor] Loading model (device={device}, resolution={resolution})...")
-        self.model = build_sam3_image_model(device=device)
+        self.model = build_sam3_image_model(device=device, bpe_path=bpe_path)
         self.processor = Sam3Processor(
             self.model,
             resolution=resolution,

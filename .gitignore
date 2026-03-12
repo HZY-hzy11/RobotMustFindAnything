@@ -3,3 +3,6 @@ build
 install
 log
 __pycache__
+
+rofa/sam3_result/
+rofa/benchmark/**/*.pdf
