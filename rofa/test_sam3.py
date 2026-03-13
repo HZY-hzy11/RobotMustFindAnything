@@ -379,7 +379,7 @@ def run_sam3_inference(segmentor: SAM3Segmentor, image_path: str, prompt: str):
 # 图像处理
 # ================================================================
 
-def process_image(image_path, image_info, output_dir):
+def process_image(image_path, image_info, output_dir, negative_prompt_info=None):
     """
     处理单张图像的语义分割（对每个物体分别使用 short_en 和 detailed_en）
 
@@ -387,6 +387,7 @@ def process_image(image_path, image_info, output_dir):
         image_path (str): 图像文件路径
         image_info (dict): 从 JSON 中读取的图像信息
         output_dir (str): 输出目录路径
+        negative_prompt_info (dict | None): 负样本提示词来源（通常为下一张图的描述）
     """
     global sam3_logger, sam3_segmentor
 
@@ -557,6 +558,115 @@ def process_image(image_path, image_info, output_dir):
                 print(f"    [X] 检测出错: {e}")
                 if sam3_logger:
                     sam3_logger.log_error(f"物体 {obj_idx} detailed_en 检测出错: {e}")
+
+        # ====== 误检测测试：使用下一张图的提示词 ======
+        if negative_prompt_info is not None:
+            next_image_name = negative_prompt_info.get('image_filename', 'N/A')
+            negative_objects = negative_prompt_info.get('object_descriptions', [])
+
+            print(f"\n{'='*70}")
+            print("[误检测测试] 当前图像使用下一张图的提示词")
+            print(f"  - 当前图像: {image_filename}")
+            print(f"  - 提示词来源: {next_image_name}")
+            print(f"  - 负样本提示词数量: {len(negative_objects) * 2}")
+            print(f"{'='*70}")
+
+            for neg_idx, neg_obj in enumerate(negative_objects, 1):
+                # short_en 负样本
+                neg_short = neg_obj.get('short_en', '').strip()
+                if neg_short:
+                    print(f"\n  [误检 short {neg_idx}/{len(negative_objects)}] 提示词: {neg_short}")
+                    try:
+                        result, duration = run_sam3_inference(sam3_segmentor, output_image_path, neg_short)
+                        detected_count = result.count if result else 0
+
+                        if sam3_logger:
+                            sam3_logger.log_inference(
+                                image_path=output_image_path,
+                                prompt=neg_short,
+                                image_filename=f"{base_filename}_mis_next_obj{neg_idx}_short",
+                                duration_sec=duration,
+                                result_count=detected_count,
+                            )
+                            sam3_logger.add_detection_result(
+                                image_num=image_num,
+                                object_id=neg_idx,
+                                desc_type='misdetect_short_en',
+                                prompt=neg_short,
+                                detected_count=detected_count,
+                                scores=result.scores.tolist() if result else [],
+                                boxes=result.boxes.tolist() if result else [],
+                            )
+
+                        if result and result.count > 0:
+                            print(f"    [!] 误检测命中: {result.count} 个 (耗时 {duration:.3f}s)")
+                            if sam3_logger:
+                                sam3_logger.log_result_detail(
+                                    image_filename=f"{base_filename}_mis_next_obj{neg_idx}_short",
+                                    prompt=neg_short,
+                                    scores=result.scores,
+                                    boxes=result.boxes,
+                                )
+                            draw_sam3_results_on_image(
+                                output_image_path,
+                                result,
+                                f"MIS-{neg_short}",
+                                f"_mis_next_obj{neg_idx}_short",
+                            )
+                        else:
+                            print(f"    [+] 符合预期: 未检测到 (耗时 {duration:.3f}s)")
+                    except Exception as e:
+                        print(f"    [X] 误检 short 测试出错: {e}")
+                        if sam3_logger:
+                            sam3_logger.log_error(f"误检 short 测试出错(当前图 {image_filename}, 词来源 {next_image_name}, idx={neg_idx}): {e}")
+
+                # detailed_en 负样本
+                neg_detailed = neg_obj.get('detailed_en', '').strip()
+                if neg_detailed:
+                    print(f"\n  [误检 detailed {neg_idx}/{len(negative_objects)}] 提示词: {neg_detailed}")
+                    try:
+                        result, duration = run_sam3_inference(sam3_segmentor, output_image_path, neg_detailed)
+                        detected_count = result.count if result else 0
+
+                        if sam3_logger:
+                            sam3_logger.log_inference(
+                                image_path=output_image_path,
+                                prompt=neg_detailed,
+                                image_filename=f"{base_filename}_mis_next_obj{neg_idx}_detailed",
+                                duration_sec=duration,
+                                result_count=detected_count,
+                            )
+                            sam3_logger.add_detection_result(
+                                image_num=image_num,
+                                object_id=neg_idx,
+                                desc_type='misdetect_detailed_en',
+                                prompt=neg_detailed,
+                                detected_count=detected_count,
+                                scores=result.scores.tolist() if result else [],
+                                boxes=result.boxes.tolist() if result else [],
+                            )
+
+                        if result and result.count > 0:
+                            print(f"    [!] 误检测命中: {result.count} 个 (耗时 {duration:.3f}s)")
+                            if sam3_logger:
+                                sam3_logger.log_result_detail(
+                                    image_filename=f"{base_filename}_mis_next_obj{neg_idx}_detailed",
+                                    prompt=neg_detailed,
+                                    scores=result.scores,
+                                    boxes=result.boxes,
+                                )
+                            draw_sam3_results_on_image(
+                                output_image_path,
+                                result,
+                                "MIS-detailed",
+                                f"_mis_next_obj{neg_idx}_detailed",
+                            )
+                        else:
+                            print(f"    [+] 符合预期: 未检测到 (耗时 {duration:.3f}s)")
+                    except Exception as e:
+                        print(f"    [X] 误检 detailed 测试出错: {e}")
+                        if sam3_logger:
+                            sam3_logger.log_error(f"误检 detailed 测试出错(当前图 {image_filename}, 词来源 {next_image_name}, idx={neg_idx}): {e}")
 
         print(f"\n{'='*70}")
         print(f"[+] 图像 {image_filename} 处理完成！")
@@ -745,7 +855,7 @@ def process_single_object_detection(image_path, image_info, object_index, output
 # ================================================================
 
 def process_selected_images(json_path, image_dir, selected_image_numbers, output_dir, log_file,
-                            confidence_threshold=0.3):
+                            confidence_threshold=0.3, enable_misdetect_test=True):
     """
     处理选定的图像集合
 
@@ -756,6 +866,7 @@ def process_selected_images(json_path, image_dir, selected_image_numbers, output
         output_dir (str): 输出目录路径
         log_file (str): 日志文件路径
         confidence_threshold (float): 置信度阈值
+        enable_misdetect_test (bool): 是否启用误检测测试（下一张图提示词测当前图）
     """
     global sam3_logger, sam3_segmentor
 
@@ -783,7 +894,7 @@ def process_selected_images(json_path, image_dir, selected_image_numbers, output
         success_count = 0
         failed_count = 0
 
-        for image_num in selected_image_numbers:
+        for selected_idx, image_num in enumerate(selected_image_numbers):
             idx = image_num - 1  # 转换为 0-based 索引
 
             if idx >= len(data) or idx < 0:
@@ -795,7 +906,14 @@ def process_selected_images(json_path, image_dir, selected_image_numbers, output
             image_filename = image_info['image_filename']
             image_path = os.path.join(image_dir, image_filename)
 
-            if process_image(image_path, image_info, output_dir):
+            negative_prompt_info = None
+            if enable_misdetect_test and len(selected_image_numbers) > 0:
+                next_image_num = selected_image_numbers[(selected_idx + 1) % len(selected_image_numbers)]
+                next_idx = next_image_num - 1
+                if 0 <= next_idx < len(data):
+                    negative_prompt_info = data[next_idx]
+
+            if process_image(image_path, image_info, output_dir, negative_prompt_info=negative_prompt_info):
                 success_count += 1
             else:
                 failed_count += 1
@@ -842,6 +960,7 @@ def main_single():
     target_image_number = 3   # 1-based
     target_object_index = 0   # 0-based (第 1 个物体)
     confidence_threshold = 0.3
+    enable_misdetect_test = True
 
     print(f"[*] 配置信息:")
     print(f"    - 脚本目录: {script_dir}")
@@ -921,6 +1040,7 @@ def main():
     # 要处理的图像编号 (1-based)
     selected_images = [3, 5, 8, 10, 11]
     confidence_threshold = 0.3
+    enable_misdetect_test = True
 
     print(f"[*] 配置信息:")
     print(f"    - 脚本目录: {script_dir}")
@@ -930,10 +1050,12 @@ def main():
     print(f"    - 日志文件: {log_file}")
     print(f"    - 选定图像: {selected_images}")
     print(f"    - 置信度阈值: {confidence_threshold}")
+    print(f"    - 误检测测试: {'开启' if enable_misdetect_test else '关闭'} (下一张图提示词测当前图)")
     print(f"    - 模式: 多张图片，每张图片分别用 short_en 和 detailed_en 检测")
 
     process_selected_images(json_path, image_dir, selected_images, output_dir, log_file,
-                            confidence_threshold=confidence_threshold)
+                            confidence_threshold=confidence_threshold,
+                            enable_misdetect_test=enable_misdetect_test)
 
     print(f"\n[+] 所有处理完成！")
 
