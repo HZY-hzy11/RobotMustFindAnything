@@ -6,3 +6,4 @@ __pycache__
 
 rofa/sam3_result/
 rofa/benchmark/**/*.pdf
+rofa/benchmark/office2/
